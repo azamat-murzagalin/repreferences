@@ -40,7 +40,9 @@ class RxPref {
     }
 
     fun notifyValueChanged(key: String) {
-        emitters[key]?.notifyEmitters()
+        synchronized(emitters) {
+            emitters[key]?.notifyEmitters()
+        }
     }
 
     private fun removeEmitterHolder(key: String, emitter: FlowableEmitter<Any>) {
@@ -63,8 +65,10 @@ class RxPref {
     }
 
     fun notifyAllChanged() {
-        emitters.forEach {
-            it.value.notifyEmitters()
+        synchronized(emitters) {
+            emitters.forEach {
+                it.value.notifyEmitters()
+            }
         }
     }
 }
