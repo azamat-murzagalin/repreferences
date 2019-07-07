@@ -96,7 +96,7 @@ Here you have two choices:
     editor.commit()
     ```
 
-    Similar to Shared preferences, it returns Boolean value signaling if commit was successful. And be aware that commit() writes all data in the same thread that called it, so you have to care about it by yourself 
+    Similar to SharedPreferences, it returns Boolean value signaling if commit was successful. And be aware that commit() writes all data in the same thread that called it, so you have to care about it by yourself 
     
 * Use apply function:
     ```kotlin
@@ -104,7 +104,7 @@ Here you have two choices:
           .subscribe({ 
               //write was succesfull
           }, {
-              //any error happened while writing
+              //an error happened while writing
           })
     ```
     apply() function returns Completable type, so you can choose which Scheduler to use
