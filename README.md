@@ -74,20 +74,20 @@ and be aware that in all observe methods the library reads data in Schedulers.io
 
 Writing data is similar to SharedPreferences:
 
-Step 1. Create editor:
+## Step 1. Create editor:
 
 ```kotlin
 var editor = rePreference.edit()
 ```
 
-Step 2. Write data:
+## Step 2. Write data:
 ```kotlin
 editor = editor.putString(testKey, "test val")
                .putBoolean(testBoolKey, true)
                .putInt(testIntKey, 2)
 ```
 
-Step 3. Apply changes:
+## Step 3. Apply changes:
 
 Here you have two choices:
 * Use commit function:
