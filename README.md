@@ -1,5 +1,5 @@
 # RePreferences
-[![](https://jitpack.io/v/AzamatEm/repreferences.svg)](https://jitpack.io/#AzamatEm/repreferences)
+[![](https://jitpack.io/v/azamat-murzagalin/repreferences.svg)](https://jitpack.io/#azamat-murzagalin/repreferences)
 
 Library to save key-value pairs with SharedPreferences-like api. But this library uses SQLite to save values, and adds reactive support
 
